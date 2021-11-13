@@ -8,7 +8,7 @@ class Note extends Component {
 
     render() {
         return (
-            <div className="note_box">
+            <div className="note_box"> 
                 <div className="text">
                     <p>{this.state.text}</p>
                 </div>
@@ -17,7 +17,6 @@ class Note extends Component {
                 onClick={() => this.props.onDelete(this.props.id)}
                 >DELETE!</button>
             </div>
-            
         );
     }
 }
