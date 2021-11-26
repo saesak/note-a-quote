@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Note from "./note";
 import PopUp from "./popup";
+import {Link, useRoutes} from "react-router-dom"
 
 class Container extends Component {
 
@@ -11,7 +12,7 @@ class Container extends Component {
                 {id: 1, text: 'Add a Note!', details: 'First Sample', seen: false},
                 {id: 2, text: 'Add a Second Note!', details: 'Second Sample', seen: false}
             ],
-            new_note_text : "",
+            new_note_text : ""
         }
         
         this.handleDelete = this.handleDelete.bind(this);
@@ -92,6 +93,12 @@ class Container extends Component {
                         </div>
                         {/*Checks to see if true, if true, shows modal*/}
                         {this.checkToggle(note.id) ? <PopUp details = {note.details} toggle={() => this.togglePop(note)} /> : null}
+
+                        <div>
+                            <li>
+                                <Link to = {`${this.returnRoute.url}/{note.id}`}>Link to it</Link>
+                            </li>
+                        </div>      
                     </div>
                 ))}
                 </div>
@@ -112,4 +119,4 @@ class Container extends Component {
     }
 }
 
-export default Container
+export default withRouter(Container)

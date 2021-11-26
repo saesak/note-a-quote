@@ -49,7 +49,7 @@
 .modal_content {
   background-color: white;
   position: absolute;
-  top: 20%;
+  top: 0%;
   left: 30%;
   width: 40%;
   padding: 20px;
@@ -65,4 +65,18 @@
 .close:hover {
   color: cyan;
   cursor: pointer;
+}
+
+
+/*container stuff */
+
+.Overall {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notes_div {
+  align-items: center;
+  justify-content: center;
 }
