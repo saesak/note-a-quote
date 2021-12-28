@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Functionally Very Similar to a ToDo App, but some quirks added
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
